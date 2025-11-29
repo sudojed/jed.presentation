@@ -19,9 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Animação 1: Card aparece (height de 0 para normal)
+  // Animação 1: Card aparece (height de 0 para normal) - começa com overflow hidden
   tl.from(".card", {
-    overflow: "hidden",
     height: 0,
     duration: 1,
     ease: "power2.inOut",
@@ -32,6 +31,12 @@ document.addEventListener("DOMContentLoaded", () => {
     top: 200,
     duration: 0.8,
     ease: "power2.out",
+  });
+
+  // Só depois da imagem terminar, o card fica overflow visible
+  tl.to(".card", {
+    overflow: "visible",
+    duration: 0.01,
   });
 
   // Animação 3: Square2 expande
