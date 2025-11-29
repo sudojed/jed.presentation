@@ -54,7 +54,7 @@ body {
   width: 505px;
   height: 308px;
   background-color: #480505;
-  
+  scale: .67;
   display: flex;
   border: #480505 solid 4px;
   overflow: hidden;
