@@ -23,7 +23,7 @@ body {
 }
 
 .section-intro {
-  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  background: white;
 }
 
 .section-intro h1 {
@@ -33,13 +33,13 @@ body {
 }
 
 .section-card {
-  background: linear-gradient(135deg, #0f0f23, #1a1a2e);
+  background: white;
   position: relative;
-  height: 200vh;
+  height: 100vh;
 }
 
 .section-end {
-  background: linear-gradient(135deg, #16213e, #1a1a2e);
+  background: white;
 }
 
 .section-end h1 {
@@ -55,9 +55,7 @@ body {
   border-radius: 8px;
   display: flex;
   border: #480505 solid 4px;
-  position: sticky;
-  top: 50%;
-  transform: translateY(-50%);
+  overflow: hidden;
 }
 
 

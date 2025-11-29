@@ -11,8 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollTrigger: {
       trigger: ".section-card",
       start: "top top",       // quando o topo da seção chegar no topo da tela
-      end: "bottom top",      // quando o final da seção chegar no topo da tela
+      end: "+=150%",          // a animação dura 150% da altura da viewport de scroll
       scrub: 1,               // suaviza a animação vinculada ao scroll (1 = 1 segundo de delay)
+      pin: true,              // FIXA a seção no lugar enquanto a animação acontece
+      anticipatePin: 1,       // suaviza o início do pin
       markers: true,          // mostra marcadores para debug (remova depois)
     }
   });
