@@ -1,0 +1,74 @@
+.card {
+  width: 505px;
+  height: 308px;
+  background-color: #480505;
+  border-radius: 8px;
+  display: flex;
+  border: #480505 solid 4px;
+  
+}
+
+
+.column1 {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  position: relative;
+}
+
+.column1 img {
+  position: absolute;   
+  top:-72px;              
+  left: 13px;
+  scale: .85;
+}
+
+
+.column2 {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border-radius: 0 10px 10px 0;
+  overflow: hidden;
+}
+
+.square1 {
+  background-color: #c17d72;
+  flex: 2;
+  border-radius: 10px 0 0 0;
+  
+}
+.square2 {
+  background-color: #2a80af;
+  flex: 1;
+  position: relative; 
+  overflow: hidden;
+  border-radius: 0 0 0 10px;
+}
+.square3 {
+  background-color: #e7b02f;
+  flex: 6;
+  position: relative; 
+  overflow: hidden;
+}
+.square4 {
+  background-color: #00223c;
+  flex: 1;
+  position: relative; 
+  overflow: hidden;
+}
+.name {
+  font-size: 60px;
+  font-weight: bolder;
+  color: white;
+  position: absolute;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
