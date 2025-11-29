@@ -46,7 +46,7 @@
   border-radius: 0 0 0 10px;
 }
 .square3 {
-  background-color: #e7b02f;
+  background-color: white;
   flex: 6;
   position: relative; 
   overflow: hidden;
@@ -70,5 +70,4 @@ body {
     align-items: center;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
 }

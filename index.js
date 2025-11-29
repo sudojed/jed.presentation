@@ -1,7 +1,8 @@
 import gsap from "gsap";
 import SplitText from "gsap/SplitText";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(SplitText);
+gsap.registerPlugin(SplitText, ScrollTrigger);
 
 document.addEventListener("DOMContentLoaded", () => {
   gsap.from(".square3", {
@@ -9,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     duration: 1.5,
     delay: 1.5,
     ease: "circ.inOut",
+    scrollTrigger: "card",
   });
   gsap.from(".square2", {
     flex: 0,
