@@ -5,29 +5,44 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
 document.addEventListener("DOMContentLoaded", () => {
-  gsap.from(".square3", {
-    flex: 0,
-    duration: 1.5,
-    delay: 1.5,
-    ease: "circ.inOut",
-    scrollTrigger: "card",
+  // Timeline principal com ScrollTrigger
+  // scrub: true faz o scroll controlar diretamente a animação (avança e reverte)
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".section-card",
+      start: "top top",       // quando o topo da seção chegar no topo da tela
+      end: "bottom top",      // quando o final da seção chegar no topo da tela
+      scrub: 1,               // suaviza a animação vinculada ao scroll (1 = 1 segundo de delay)
+      markers: true,          // mostra marcadores para debug (remova depois)
+    }
   });
-  gsap.from(".square2", {
-    flex: 0,
-    duration: 1.5,
-    delay: 1.5,
-    ease: "circ.inOut",
-  });
-  gsap.from(".square1 img", {
-    top: 200,
-    ease: "steps(2)",
-    delay: 1,
-  });
-  gsap.from(".card", {
+
+  // Animação 1: Card aparece (height de 0 para normal)
+  tl.from(".card", {
     overflow: "hidden",
     height: 0,
     duration: 1,
-    ease: "bounce.in",
-    delay: 1,
+    ease: "power2.inOut",
+  });
+
+  // Animação 2: Imagem sobe para a posição
+  tl.from(".square1 img", {
+    top: 200,
+    duration: 0.8,
+    ease: "power2.out",
+  });
+
+  // Animação 3: Square2 expande
+  tl.from(".square2", {
+    flex: 0,
+    duration: 0.8,
+    ease: "power2.inOut",
+  });
+
+  // Animação 4: Square3 expande
+  tl.from(".square3", {
+    flex: 0,
+    duration: 0.8,
+    ease: "power2.inOut",
   });
 });
